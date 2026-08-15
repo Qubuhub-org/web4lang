@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "crates/web4lang-core"
+]
+resolver = "2"
