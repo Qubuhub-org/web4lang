@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "web4lang": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "web4lang-mcp"
+      ],
+      "env": {
+        "WEB4LANG_CONFIG": "/path/to/web4lang.config.json"
+      }
+    }
+  }
+}
