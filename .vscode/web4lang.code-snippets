@@ -1,0 +1,41 @@
+{
+  "web4lang Frontmatter Schema": {
+    "scope": "web4lang,markdown,plaintext",
+    "prefix": "nf-doc",
+    "body": [
+      "---",
+      "$$schema: \"web4/nf-v1\"",
+      "id: \"doc_${1:01HX98}\"",
+      "title: \"${2:Module Specification}\"",
+      "target: \"${3|wasm,json,html|}\"",
+      "metadata:",
+      "  created: \"${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}\"",
+      "  file: \"${TM_FILENAME}\"",
+      "---",
+      "",
+      "# ${2:Module Specification}",
+      "",
+      "@node ${4:MainNode} {",
+      "  attr path: string = \"./${TM_FILENAME_BASE}.nf\";",
+      "  attr strict: boolean = true;",
+      "  ",
+      "  pipe Lexer -> Parser -> AST -> Compiler;",
+      "}",
+      "",
+      "$0"
+    ],
+    "description": "Inserts a complete .nf web4lang schema header and root node"
+  },
+
+  "web4lang Node Block": {
+    "scope": "web4lang,markdown,plaintext",
+    "prefix": "nf-node",
+    "body": [
+      "@node ${1:NodeName} {",
+      "  attr ${2:key}: ${3:string} = \"${4:value}\";",
+      "  $0",
+      "}"
+    ],
+    "description": "Inserts a web4lang @node declaration block"
+  }
+}
