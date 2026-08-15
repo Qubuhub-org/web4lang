@@ -1,0 +1,40 @@
+{
+  "File Header with Metadata": {
+    "scope": "javascript,typescript,python",
+    "prefix": "dochead",
+    "body": [
+      "/**",
+      " * File: ${TM_FILENAME}",
+      " * Module: ${TM_FILENAME_BASE}",
+      " * Created: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE} ${CURRENT_HOUR}:${CURRENT_MINUTE}",
+      " * Path: ${RELATIVE_FILEPATH}",
+      " */",
+      "",
+      "$0"
+    ],
+    "description": "Inserts a file header with dynamic file info and date."
+  },
+
+  "Wrap Selected Text in Try-Catch": {
+    "scope": "javascript,typescript",
+    "prefix": "tryselect",
+    "body": [
+      "try {",
+      "  ${TM_SELECTED_TEXT:${1:// code}}",
+      "} catch (${2:error}) {",
+      "  console.error('Error in ${TM_FILENAME_BASE}:', ${2:error});",
+      "}"
+    ],
+    "description": "Wraps highlighted text in a try-catch block."
+  },
+
+  "Paste Clipboard into Comment": {
+    "prefix": "clipbox",
+    "body": [
+      "// --- Clipboard Context ---",
+      "// ${CLIPBOARD}",
+      "// -------------------------"
+    ],
+    "description": "Pastes system clipboard content inside a formatted comment block."
+  }
+}
