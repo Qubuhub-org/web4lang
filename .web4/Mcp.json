@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "web4lang": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "/path/to/web4lang",
+        "run",
+        "web4lang_mcp_server.py"
+      ]
+    }
+  }
+}
