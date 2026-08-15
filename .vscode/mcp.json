@@ -3,13 +3,15 @@
     "web4lang": {
       "command": "node",
       "args": [
-        "/path/to/web4lang/dist/mcp-server.js"
+        "${workspaceFolder}/dist/mcp-server.js"
       ],
       "env": {
-        "WEB4LANG_WORKSPACE": "/path/to/workspace",
-        "NODE_ENV": "production"
+        "WEB4LANG_WORKSPACE": "${workspaceFolder}",
+        "NODE_ENV": "development"
       }
-    },
+    }
+  }
+}
     "github": {
       "command": "npx",
       "args": [
